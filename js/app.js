@@ -57,6 +57,5 @@ function renderContent(pageObj) {
   contentContainer.innerHTML = ""
   contentContainer.innerHTML = 
     `<h1>${pageObj.title}</h1>
-    <p>${pageObj.content}</p>`
-
+    ${pageObj.content}`
 }
