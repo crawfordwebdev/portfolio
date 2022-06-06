@@ -13,8 +13,7 @@ const navbarEl = document.querySelectorAll('.nav-item')
 const navbar = document.querySelector('#navbar')
 const contentSectionEl = document.querySelectorAll('.section-content')
 const contentContainer = document.querySelector('#content')
-
-console.log(contentSectionEl)
+const lightDarkBtn = document.querySelector("#light-dark-button")
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -22,7 +21,11 @@ navbar.addEventListener('click', navigateContent)
 
 
 
+
 /*-------------------------------- Functions --------------------------------*/
+
+// Start on about page
+renderContent(portfolio.pages.find(el => el.navText === "About"))
 
 function navigateContent(evt) {
   let selection = evt.target
