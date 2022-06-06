@@ -1,10 +1,28 @@
+const socialMedia = [
+  {
+    name: "GitHub",
+    url: "https://github.com/crawfordwebdev/",
+    img: `<i class="fa-brands fa-github"></i>`
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/crawfordmichaeldev/",
+    img: `<i class="fa-brands fa-linkedin-in"></i>`
+  },
+  {
+    name: "Twitter",
+    url: "https://twitter.com/crawfordwebdev",
+    img: `<i class="fa-brands fa-twitter"></i>`
+  },
+]
+
 const workPieces = [
   {
     name: "Tic Tac Toe",
     url: "https://ttt.crawfordwebdev.com/",
     description: "",
     technologies: ["html", "css", "javascript"],
-    image: "",
+    screenshot: "",
   },
 ]
 
@@ -26,7 +44,7 @@ const pages = [
     navText: "Contact",
     title: "Contact Points",
     id: "contact-section",
-    content: "",
+    content: `<div id="contact-points">${contactPageHTML()}</div>`,
   },
   {
     navText: "Work",
@@ -35,6 +53,16 @@ const pages = [
     content: "",
   },
 ]
+
+
+function contactPageHTML() {
+  let html = ""
+  socialMedia.forEach(function (el) {
+    html += `<a href="${el.url}">${el.img}</a>
+    `
+  })
+  return html
+}
 
 
 export {
