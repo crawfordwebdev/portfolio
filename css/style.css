@@ -1,8 +1,8 @@
 :root {
   /* https://coolors.co/palette/03045e-0077b6-00b4d8-90e0ef-caf0f8 */
   --midnight-blue: hsla(239, 94%, 19%, 1);
-  --star-command-blue: hsla(201, 100%, 36%, 1);
-  --pacific-blue: hsla(190, 100%, 42%, 1);
+  --star-command-blue: hsl(201, 100%, 36%);
+  --pacific-blue: hsl(190, 100%, 42%);
   --middle-blue: hsla(189, 75%, 75%, 1);
   --light-cyan: hsla(190, 77%, 88%, 1);
 }
@@ -29,4 +29,99 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
+
+  grid-template-areas:
+  "nav nav nav"
+  "main main main";
+}
+
+nav#navbar {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-area: nav;
+}
+
+nav>.nav-item {
+  display: block;
+  padding: 15px 5px;
+  font-size: 1.5rem;
+}
+
+nav>div:last-child {
+  margin-left: auto;
+  font-size: 2rem;
+}
+
+main {
+  grid-area: main;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: top;
+  align-items: center;
+}
+#content {
+
+}
+
+
+#contact-points {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  width: 50vw;
+  max-width: 900px;
+  font-size: 3rem;
+  color: black;
+}
+
+#contact-points a:link {
+  color: black;
+  margin: 0 2rem;
+}
+
+#contact-points a,
+#contact-points a:visited,
+#contact-points a:link {
+  color: black;
+}
+
+#contact-points>a {
+  align-items: center; 
+
+}
+
+
+/* Tablet Breakpoint */
+@media only screen and (min-width: 768px) {}
+
+/* Desktop Breakpoint */
+@media only screen and (min-width: 1024px) {
+
+  nav#navbar {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  nav>.nav-item {
+    display: block;
+    padding: 15px 5px;
+  }
+
+  nav>button {
+    margin-left: auto;
+    padding: 1rem;
+  }
 }
