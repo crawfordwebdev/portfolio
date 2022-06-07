@@ -1,20 +1,22 @@
-const gitHubAddress = "https://github.com/"
-const gitHubProfileName = "crawfordwebdev"
-
-
 const socialMedia = [
   {
     name: "GitHub",
-    url: "https://github.com/crawfordwebdev/",
+    homepage: "https://github.com/",
+    profile: "crawfordwebdev",
+    url: "https://github.com/crawfordwebdev",
     img: `<i class="fa-brands fa-github"></i>`
   },
   {
     name: "LinkedIn",
+    homepage: "https://www.linkedin.com/in/",
+    profile: "crawfordmichaeldev",
     url: "https://www.linkedin.com/in/crawfordmichaeldev/",
     img: `<i class="fa-brands fa-linkedin-in"></i>`
   },
   {
     name: "Twitter",
+    homepage: "https://twitter.com/",
+    profile: "crawfordwebdev",
     url: "https://twitter.com/crawfordwebdev",
     img: `<i class="fa-brands fa-twitter"></i>`
   },
