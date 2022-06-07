@@ -1,3 +1,7 @@
+const gitHubAddress = "https://github.com/"
+const gitHubProfileName = "crawfordwebdev"
+
+
 const socialMedia = [
   {
     name: "GitHub",
@@ -20,6 +24,7 @@ const workPieces = [
   {
     name: "Tic Tac Toe",
     url: "https://ttt.crawfordwebdev.com/",
+    githubRepo: "ttt-weekend",
     description: "",
     technologies: ["html", "css", "javascript"],
     screenshot: "",
