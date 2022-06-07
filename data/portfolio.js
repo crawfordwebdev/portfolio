@@ -22,6 +22,13 @@ const socialMedia = [
   },
 ]
 
+const resume = {
+  databases: ["MySQL/MariaDB"],
+  progLanguages: ["HTML5","CSS3","JavaScript"],
+  operatingsystems: ["Linux (Debian, Ubuntu, CentOS/RedHat)", "Microsoft Windows 10"]
+
+}
+
 const workPieces = [
   {
     name: "Tic Tac Toe",
