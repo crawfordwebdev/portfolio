@@ -22,6 +22,7 @@ const bgMusicBtn = document.getElementById('bgMusic-btn')
 
 /*----------------------------- Event Listeners -----------------------------*/
 navbar.addEventListener('click', navigateContent)
+navbar.addEventListener('click', navbarClass)
 bgMusicBtn.addEventListener('click', musicHandler)
 
 
@@ -61,9 +62,21 @@ function navigateContent(evt) {
 
 function renderContent(pageObj) {
   contentContainer.innerHTML = ""
-  contentContainer.innerHTML = 
+  contentContainer.innerHTML =
     `<h1>${pageObj.title}</h1>
     <p>${pageObj.content}</p>`
+}
+
+function navbarClass(evt) {
+  let classToModify = "nav-item-highlight"
+  for (let item of navbarEl) {
+    console.log(`Current Item: ${item}`)
+    if (item.classList.contains(classToModify)) {
+      item.classList.remove(classToModify)
+    }
+  }
+  console.log(`Target classList: ${evt.target.classList}`)
+  evt.target.classList.add(classToModify);
 }
 
 function musicHandler(evt) {

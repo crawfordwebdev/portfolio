@@ -66,6 +66,16 @@ body {
   background-color: var(--navbar-bg);
 }
 
+.nav-item {
+  color: black;
+}
+
+.nav-item-highlight {
+  color: black;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
 main {
   grid-area: main;
   display: flex;
