@@ -70,12 +70,10 @@ function musicHandler(evt) {
   if (!musicPlaying) {
     bgMusic.volume = .3
     bgMusic.play()
-    console.log("music on");
     evt.target.textContent = "Pause Music"
     musicPlaying = true
   } else {
     bgMusic.pause()
-    console.log("music pause")
     evt.target.textContent = "Resume Music"
     musicPlaying = false;
   }
