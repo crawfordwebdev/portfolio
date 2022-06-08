@@ -10,7 +10,7 @@ import * as portfolio from "../data/portfolio.js"
 
 /*------------------------ Cached Element References ------------------------*/
 const navbarEl = document.querySelectorAll('.nav-item')
-const navbar = document.querySelector('#navbar')
+const navbar = document.querySelector('#navbar-container')
 const contentSectionEl = document.querySelectorAll('.section-content')
 const contentContainer = document.querySelector('#content')
 const lightDarkBtn = document.querySelector("#light-dark-button")
