@@ -48,6 +48,65 @@ body {
   "main main main"; */
 }
 
+
+
+#contact-points {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  width: 50vw;
+  max-width: var(--easy-read);
+  font-size: 3rem;
+  color: black;
+}
+
+.navbar {
+  font-size: 1.5rem;
+  background-color: var(--navbar-bg);
+}
+
+main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  margin: 10px;
+}
+
+#content {
+  max-width: var(--easy-read);
+}
+
+#content>h1 {
+  margin: 10px 0;
+  text-align: center;
+}
+
+#contact-points a:link {
+  color: black;
+  margin: 0 2rem;
+}
+
+#contact-points a,
+#contact-points a:visited,
+#contact-points a:link {
+  color: black;
+}
+
+#contact-points>a {
+  align-items: center; 
+
+}
+
+#light-dark-input {
+  margin-left: auto;
+  margin-right: 10px;
+  font-size: 2rem;
+}
+
+
 /* 
 nav#navbar {
   background-color: var(--navbar-bg);
@@ -70,49 +129,7 @@ nav>div:last-child {
   margin-right: 10px;
   font-size: 2rem;
 }
-
-main {
-  grid-area: main;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: top;
-}
-#content {
-  max-width: var(--easy-read);
-}
-
-#content>h1 {
-  margin: 10px 0;
-  text-align: center;
-}
-
-#contact-points {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50vh;
-  width: 50vw;
-  max-width: 900px;
-  font-size: 3rem;
-  color: black;
-}
-
-#contact-points a:link {
-  color: black;
-  margin: 0 2rem;
-}
-
-#contact-points a,
-#contact-points a:visited,
-#contact-points a:link {
-  color: black;
-}
-
-#contact-points>a {
-  align-items: center; 
-
-} */
+ */
 
 
 /* Tablet Breakpoint */
