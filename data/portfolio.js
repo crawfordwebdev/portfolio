@@ -35,7 +35,7 @@ const pages = {
     navText: "About",
     title: "About",
     id: "about-section",
-    content: `Full-stack web developer and photographer that enjoys using modern languages and frameworks to help companies of all sizes create fast and secure websites. Focus on fast and efficient back-end code with intuitive user interfaces (UI) to assist in the overall user experience(UX).`,
+    content: `Full-stack web developer and photographer that enjoys using modern languages and frameworks to help companies of all sizes create fast and secure websites. Focus on fast and efficient back-end code with intuitive user interfaces (UI) to assist in the overall user experience(UX). <span id="portfolio-creator-name">-Michael Crawford</span>`,
   },
   resume: {
     navText: "Resume",

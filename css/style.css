@@ -129,6 +129,10 @@ main {
   font-size: 1.25rem;
 }
 
+#portfolio-creator-name {
+  font-weight: 600;
+}
+
 
 /* 
 nav#navbar {
