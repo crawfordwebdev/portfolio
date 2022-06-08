@@ -1,10 +1,12 @@
 import * as portfolio from "../data/portfolio.js"
 
 /*-------------------------------- Constants --------------------------------*/
+const bgMusic = new Audio(`../assets/music/the-introvert-michael-kobrin-10959.mp3`)
 
 
 
 /*---------------------------- Variables (state) ----------------------------*/
+let musicPlaying = false
 
 
 
@@ -15,9 +17,12 @@ const contentSectionEl = document.querySelectorAll('.section-content')
 const contentContainer = document.querySelector('#content')
 const lightDarkBtn = document.querySelector("#light-dark-button")
 
+const bgMusicBtn = document.getElementById('bgMusic-btn')
+
 
 /*----------------------------- Event Listeners -----------------------------*/
 navbar.addEventListener('click', navigateContent)
+bgMusicBtn.addEventListener('click', musicHandler)
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -39,7 +44,7 @@ function navigateContent(evt) {
     // console.log(`Selection ID: ${sectionContent.id}`)
     // console.log(contentSectionEl)
 
-    let sectionHTML = document.querySelector(sectionContent.id)
+    // let sectionHTML = document.querySelector(sectionContent.id)
 
     // console.dir(`Section HTML: ${sectionHTML}`)
     renderContent(sectionContent)
@@ -59,4 +64,19 @@ function renderContent(pageObj) {
   contentContainer.innerHTML = 
     `<h1>${pageObj.title}</h1>
     <p>${pageObj.content}</p>`
+}
+
+function musicHandler(evt) {
+  if (!musicPlaying) {
+    bgMusic.volume = .5
+    bgMusic.play()
+    console.log("music on");
+    evt.target.textContent = "Pause Music"
+    musicPlaying = true
+  } else {
+    bgMusic.pause()
+    console.log("music pause")
+    evt.target.textContent = "Resume Music"
+    musicPlaying = false;
+  }
 }

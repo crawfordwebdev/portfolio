@@ -99,6 +99,13 @@ main {
   align-items: center; 
 
 }
+#bgMusic-btn {
+  font-size: 1rem;
+  border-radius: 10px;
+  margin-right: 2vw;
+  margin-left: auto;
+}
+
 
 #light-dark-input {
   margin-left: auto;
