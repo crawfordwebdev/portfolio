@@ -10,7 +10,7 @@
 </p><br>
 
 ## Technologies Used: 
-HTML, CSS, JavaScript<br>
+HTML, CSS, JavaScript, Bootstrap<br>
 
 ## Next Steps:
 - Printer friendly Resume
