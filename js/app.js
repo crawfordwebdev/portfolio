@@ -4,20 +4,16 @@ import * as portfolio from "../data/portfolio.js"
 const bgMusic = new Audio(`../assets/music/the-introvert-michael-kobrin-10959.mp3`)
 
 
-
 /*---------------------------- Variables (state) ----------------------------*/
 let musicPlaying = false
 
 
-
 /*------------------------ Cached Element References ------------------------*/
 const navbarEl = document.querySelectorAll('.nav-item')
-const navbar = document.querySelector('#navbar-container')
-const contentSectionEl = document.querySelectorAll('.section-content')
+const navbar = document.querySelector('.navbar-nav')
 const contentContainer = document.querySelector('#content')
-const lightDarkBtn = document.querySelector("#light-dark-button")
-
 const bgMusicBtn = document.getElementById('bgMusic-btn')
+const lightDarkBtn = document.querySelector("#light-dark-button")
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -29,35 +25,17 @@ bgMusicBtn.addEventListener('click', musicHandler)
 /*-------------------------------- Functions --------------------------------*/
 
 // Start on about page
-renderContent(portfolio.pages.find(el => el.navText === "About"))
+renderContent(portfolio.pages['about'])
 
 function navigateContent(evt) {
   let selection = evt.target
 
   // Check if it is a navigation item
   if (selection.classList[0] == 'nav-item') {
-    // textContent and navText should be the same
-    // console.dir(selection)
-
-    let sectionContent = portfolio.pages.find(el => el.navText === selection.textContent)
-
-    // console.log(sectionContent)
-    // console.log(`Selection ID: ${sectionContent.id}`)
-    // console.log(contentSectionEl)
-
-    // let sectionHTML = document.querySelector(sectionContent.id)
-
-    // console.dir(`Section HTML: ${sectionHTML}`)
+    let key = evt.target.textContent.toLowerCase()
+    let sectionContent = portfolio.pages[key]
     renderContent(sectionContent)
-
-
-    // Need to match object with content we're looking for
-
-
-
   }
-
-
 }
 
 function renderContent(pageObj) {
@@ -75,7 +53,6 @@ function navbarClass(evt) {
       item.classList.remove(classToModify)
     }
   }
-  console.log(`Target classList: ${evt.target.classList}`)
   evt.target.classList.add(classToModify);
 }
 
