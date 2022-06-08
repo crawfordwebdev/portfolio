@@ -20,8 +20,6 @@ const lightDarkBtn = document.querySelector("#light-dark-button")
 navbar.addEventListener('click', navigateContent)
 
 
-
-
 /*-------------------------------- Functions --------------------------------*/
 
 // Start on about page
@@ -33,17 +31,17 @@ function navigateContent(evt) {
   // Check if it is a navigation item
   if (selection.classList[0] == 'nav-item') {
     // textContent and navText should be the same
-    console.dir(selection)
+    // console.dir(selection)
 
     let sectionContent = portfolio.pages.find(el => el.navText === selection.textContent)
 
-    console.log(sectionContent)
-    console.log(`Selection ID: ${sectionContent.id}`)
-    console.log(contentSectionEl)
+    // console.log(sectionContent)
+    // console.log(`Selection ID: ${sectionContent.id}`)
+    // console.log(contentSectionEl)
 
     let sectionHTML = document.querySelector(sectionContent.id)
 
-    console.dir(`Section HTML: ${sectionHTML}`)
+    // console.dir(`Section HTML: ${sectionHTML}`)
     renderContent(sectionContent)
 
 
@@ -60,5 +58,5 @@ function renderContent(pageObj) {
   contentContainer.innerHTML = ""
   contentContainer.innerHTML = 
     `<h1>${pageObj.title}</h1>
-    ${pageObj.content}`
+    <p>${pageObj.content}</p>`
 }
