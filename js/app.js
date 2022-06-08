@@ -68,7 +68,7 @@ function renderContent(pageObj) {
 
 function musicHandler(evt) {
   if (!musicPlaying) {
-    bgMusic.volume = .5
+    bgMusic.volume = .3
     bgMusic.play()
     console.log("music on");
     evt.target.textContent = "Pause Music"
