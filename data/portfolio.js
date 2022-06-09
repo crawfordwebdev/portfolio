@@ -138,6 +138,16 @@ let projectMarkup = workPieces.map(project =>
 
 pages.work.content = projectMarkup
 
+function resumePageMarkup() {
+  let html = ""
+  
+
+  return html
+
+}
+
+pages.resume.content = resumePageMarkup();
+
 
 
 export {
