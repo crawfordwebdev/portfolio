@@ -6,8 +6,7 @@
 - **[Plan Link](https://trello.com/b/M04V2woe/michael-crawford-portfolio)**<br>
 
 ## Screenshot: 
-<p>The main view when navigating to your portfolio
-</p><br>
+<img src="https://github.com/crawfordwebdev/portfolio/raw/main/assets/appScreenshot.png" alt="Screenshot of Application">
 
 ## Technologies Used: 
 HTML, CSS, JavaScript, Bootstrap<br>
