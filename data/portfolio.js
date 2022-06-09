@@ -41,7 +41,7 @@ const pages = {
     navText: "Resume",
     title: "Resume",
     id: "resume-section",
-    content: "",
+    content: ``,
   },
   contact: {
     navText: "Contact",
