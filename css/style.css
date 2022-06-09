@@ -124,11 +124,12 @@ div > span {
   filter: grayscale(100%);
 }
 .card {
-  transition: all linear 0.75s;
+  bottom: 0;
+  transition: all linear 0.1s;
 }
 
 .card:hover {
-  bottom: 10px;
+  bottom: 5px;
 }
 
 #contact-points {
