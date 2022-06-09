@@ -8,12 +8,39 @@
   --margin-side: 10px;
 
   
-  --navbar-bg: hsla(190, 100%, 42%, 1);
-  --content-bg: hsla(190, 77%, 88%, 1);
+  --navbar-bg: #559de0;;
+  --content-bg: #dfdfdf23;
+
+  --primary-btn: #0051B6;
+  --primary-btn-darker: #002C62;
+  --primary-btn-border: #01418f;
 
   --easy-read: 900px;
 
+  --light-navbar-bg: #778DA9;
+  --light-content-bg: #;
 
+    /* Generated with: https://nighteye.app/dark-css-generator/ */
+  --dark-navbar-bg: #000;
+
+
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--primary-btn);
+  --bs-btn-border-color: var(--primary-btn-border);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--primary-btn-darker);
+  --bs-btn-hover-border-color: var(---primary-btn);
+  --bs-btn-focus-shadow-rgb: 49,132,253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--primary-btn);
+  --bs-btn-active-border-color: #0a53be;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--primary-btn-border);
+  --bs-btn-disabled-border-color: var(--primary-btn-border);
 }
 
 html {
@@ -182,3 +209,14 @@ nav>div:last-child {
     padding: 1rem;
   }
 } */
+
+
+
+.light-mode {
+
+
+}
+
+.dark-mode {
+
+}
