@@ -233,12 +233,11 @@ function companyExists(value) {
 }
 
 
-let imageList = workPieces.map(project => project.image)
-
-console.log(imageList)
+const imageList = workPieces.map(project => project.image)
 
 export {
   workPieces,
   pages,
   resume,
+  imageList,
 }
