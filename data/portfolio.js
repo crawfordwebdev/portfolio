@@ -114,7 +114,7 @@ const workPieces = [
 function contactPageHTML() {
   let html = ""
   for (let item in socialMedia) {
-    html += `<a href="${socialMedia[item].url}">${socialMedia[item].img}</a>
+    html += `<a target="_blank" rel="noopener" href="${socialMedia[item].url}">${socialMedia[item].img}</a>
     `
   }
   return html
