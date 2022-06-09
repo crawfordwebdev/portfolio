@@ -142,6 +142,9 @@ function resumePageMarkup() {
   let professionalExperience, education, databases, programmingLanguages, frameworks, backend, otherTechnologies, operatingSystems= ""
 
   const resumeSeperator = ` <span class="resume-seperator">|</span> `
+  const resumeSubSectionClass = `resume-subsection`
+  const resumeSectionClass = `resume-section`
+  const resumeYearsClass = `resume-years`
 
   // ICE Map all of these to objects based on key?
 
@@ -176,17 +179,17 @@ function resumePageMarkup() {
   ).join(resumeSeperator)
 
   professionalExperience = resume.professionalExperience.map(item => 
-    `<div class="resume-section">
-      <span class="resume-subsection">${item.title}${companyExists(item.company)}</span>
-      <div class="resume-years">${item.years}</div>
+    `<div class="${resumeSectionClass}">
+      <span class="${resumeSubSectionClass}">${item.title}${companyExists(item.company)}</span>
+      <div class="${resumeYearsClass}">${item.years}</div>
     </div>
     `
   ).join('')
 
   education = resume.education.map(item => 
-    `<div class="resume-section">
-      <span class="resume-subsection">${item.school}${companyExists(item.degree)}</span>
-      <div class="resume-years">${item.years}</div>
+    `<div class="${resumeSectionClass}">
+      <span class="${resumeSubSectionClass}">${item.school}${companyExists(item.degree)}</span>
+      <div class="${resumeYearsClass}">${item.years}</div>
     </div>
     `
   ).join('')
@@ -195,22 +198,22 @@ function resumePageMarkup() {
   <h1>${resume.title}</h1>
   <h2>Technical Expertise</h2>
   <div>
-    <span class="resume-subsection">Databases: </span>${databases}
+    <span class="${resumeSubSectionClass}">Databases: </span>${databases}
   </div>
   <div>
-    <span class="resume-subsection">Programming: </span>${programmingLanguages}
+    <span class="${resumeSubSectionClass}">Programming: </span>${programmingLanguages}
   </div>
   <div>
-    <span class="resume-subsection">Frameworks: </span>${frameworks}
+    <span class="${resumeSubSectionClass}">Frameworks: </span>${frameworks}
   </div>
   <div>
-    <span class="resume-subsection">Backend: </span>${backend}
+    <span class="${resumeSubSectionClass}">Backend: </span>${backend}
   </div>
   <div>
-    <span class="resume-subsection">Other Technologies: </span>${otherTechnologies}
+    <span class="${resumeSubSectionClass}">Other Technologies: </span>${otherTechnologies}
   </div>
   <div>
-    <span class="resume-subsection">Operating Systems: </span>${operatingSystems}
+    <span class="${resumeSubSectionClass}">Operating Systems: </span>${operatingSystems}
   </div>
   <h2>Professional Experience</h2>
   ${professionalExperience}
