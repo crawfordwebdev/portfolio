@@ -7,22 +7,23 @@
   --light-cyan: hsla(190, 77%, 88%, 1);
   --margin-side: 10px;
 
-  
-  --navbar-bg: #559de0;;
-  --content-bg: #dfdfdf23;
+  --light-navbar-bg: #559de0;
+  --light-content-bg: #dfdfdf23;
+  --light-text-color: white;
+
+  --dark-navbar-bg: #0D1B2A;
+  --dark-content-bg: #415a77;
+  --dark-text-color: #E0E1DD;
 
   --primary-btn: #0051B6;
   --primary-btn-darker: #002C62;
   --primary-btn-border: #01418f;
 
+  --navbar-bg: var(--light-navbar-bg);
+  --content-bg: var(--light-content-bg);
+  --text-color: var(--light-text-color);
+
   --easy-read: 900px;
-
-  --light-navbar-bg: #778DA9;
-  --light-content-bg: #;
-
-    /* Generated with: https://nighteye.app/dark-css-generator/ */
-  --dark-navbar-bg: #000;
-
 
 }
 
@@ -85,7 +86,7 @@ body {
   width: 50vw;
   max-width: var(--easy-read);
   font-size: 3rem;
-  color: black;
+  color: var(--text-color);
 }
 
 .navbar {
@@ -94,11 +95,11 @@ body {
 }
 
 .nav-item {
-  color: black;
+  color: var(--text-color);
 }
 
 .nav-item-highlight {
-  color: black;
+  color: var(--text-color);
   text-decoration: underline;
   font-weight: 600;
 }
@@ -122,14 +123,14 @@ main {
 }
 
 #contact-points a:link {
-  color: black;
+  color: var(--text-color);
   margin: 0 2rem;
 }
 
 #contact-points a,
 #contact-points a:visited,
 #contact-points a:link {
-  color: black;
+  color: var(--text-color);
 }
 
 #contact-points>a {
@@ -209,14 +210,3 @@ nav>div:last-child {
     padding: 1rem;
   }
 } */
-
-
-
-.light-mode {
-
-
-}
-
-.dark-mode {
-
-}
