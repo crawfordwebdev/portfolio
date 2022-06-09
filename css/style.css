@@ -9,7 +9,7 @@
 
   --light-navbar-bg: #559de0;
   --light-content-bg: #dfdfdf23;
-  --light-text-color: white;
+  --light-text-color: black;
 
   --dark-navbar-bg: #0D1B2A;
   --dark-content-bg: #415a77;
@@ -74,6 +74,10 @@ body {
   grid-template-areas:
   "nav nav nav"
   "main main main"; */
+}
+
+h1, p, #light-dark-input {
+  color: var(--text-color);
 }
 
 
