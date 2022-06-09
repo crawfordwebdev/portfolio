@@ -73,8 +73,6 @@ const resume = {
   ]
 }
 
-
-
 const pages = {
   about: {
     navText: "About",
@@ -121,7 +119,6 @@ function contactPageHTML() {
   }
   return html
 }
-
 
 let projectMarkup = workPieces.map(project =>
   `
@@ -218,7 +215,6 @@ function resumePageMarkup() {
   <h2>Education</h2>
   ${education}
   `
-
 }
 
 pages.resume.content = resumePageMarkup()
@@ -230,8 +226,6 @@ function companyExists(value) {
   }
   return html
 }
-
-
 
 export {
   workPieces,
