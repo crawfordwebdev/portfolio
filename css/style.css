@@ -116,7 +116,20 @@ div > span {
   font-size: 1.2rem;
 }
 
+.card img{
+  transition: all linear 0.25s;
+}
 
+.card img:hover {
+  filter: grayscale(100%);
+}
+.card {
+  transition: all linear 0.75s;
+}
+
+.card:hover {
+  bottom: 10px;
+}
 
 #contact-points {
   display: flex;
