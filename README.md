@@ -14,3 +14,4 @@ HTML, CSS, JavaScript, Bootstrap<br>
 ## Next Steps:
 - Printer friendly Resume
 - Light/Dark Mode set by OS default
+- Cache Portfolio's Work Page images after initial website is loaded
