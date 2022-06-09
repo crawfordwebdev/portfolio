@@ -76,22 +76,27 @@ function musicHandler(evt) {
 function lightDarkMode(evt) {
   console.log("test")
   console.log(`Light Mode: ${lightMode}`)
-  let navbarBG, contentBG, textColorBG
+  let navbarBG, contentBG, textColorBG, navgLinkHoverColor, lightDarkTextContent
 
   if (lightMode) {
     // make dark
     navbarBG = '--dark-navbar-bg'
     contentBG = '--dark-content-bg'
     textColorBG = '--dark-text-color'
+    navgLinkHoverColor = textColorBG
+    lightDarkTextContent = ` Dark  <i class="fa-solid fa-lightbulb">`
     lightMode = false;
   } else {
     // make light
     navbarBG = '--light-navbar-bg'
     contentBG = '--light-content-bg'
     textColorBG = '--light-text-color'
+    navgLinkHoverColor = textColorBG
+    lightDarkTextContent = `Light  <i class="fa-solid fa-lightbulb">`
     lightMode = true;
   }
   root.style.setProperty('--navbar-bg', `var(${navbarBG})`)
   root.style.setProperty('--content-bg', `var(${contentBG})`)
   root.style.setProperty('--text-color', `var(${textColorBG}`)
+  lightDarkBtn.innerHTML = lightDarkTextContent
 }

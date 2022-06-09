@@ -10,6 +10,7 @@
   --light-navbar-bg: #559de0;
   --light-content-bg: #dfdfdf23;
   --light-text-color: black;
+  --light-nav-item-highlight: black;
 
   --dark-navbar-bg: #0D1B2A;
   --dark-content-bg: #415a77;
@@ -34,7 +35,7 @@
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: var(--primary-btn-darker);
   --bs-btn-hover-border-color: var(---primary-btn);
-  --bs-btn-focus-shadow-rgb: 49,132,253;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: var(--primary-btn);
   --bs-btn-active-border-color: #0a53be;
@@ -74,9 +75,12 @@ body {
   grid-template-areas:
   "nav nav nav"
   "main main main"; */
+  transition: 0.25s;
 }
 
-h1, p, #light-dark-input {
+h1,
+p,
+#light-dark-input {
   color: var(--text-color);
 }
 
@@ -103,10 +107,17 @@ h1, p, #light-dark-input {
 }
 
 .nav-item-highlight {
+  transition: .25s;
   color: var(--text-color);
   text-decoration: underline;
   font-weight: 600;
 }
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--text-color);
+}
+
 
 main {
   grid-area: main;
@@ -138,9 +149,10 @@ main {
 }
 
 #contact-points>a {
-  align-items: center; 
+  align-items: center;
 
 }
+
 #bgMusic-btn {
   font-size: 1rem;
   border-radius: 10px;
@@ -152,7 +164,15 @@ main {
 #light-dark-input {
   margin-left: auto;
   margin-right: 10px;
+
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -webkit-touch-callout: none ;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
+
 .fa-lightbulb {
   font-size: 2rem;
 }
@@ -163,6 +183,11 @@ main {
 
 #portfolio-creator-name {
   font-weight: 600;
+}
+
+#bgMusic-btn {
+  background-color: var(--content-bg);
+  color: var(--text-color);
 }
 
 
