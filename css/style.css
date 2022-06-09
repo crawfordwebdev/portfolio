@@ -45,6 +45,16 @@
   --bs-btn-disabled-border-color: var(--primary-btn-border);
 }
 
+.card {
+  --bs-card-bg: var(--dark-navbar-bg);
+
+  /* --content-bg */
+}
+
+.card-title{
+  color: var(--dark-text-color);
+}
+
 html {
   box-sizing: border-box
 }
