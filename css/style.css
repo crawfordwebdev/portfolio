@@ -129,6 +129,14 @@ div > span {
   color: var(--text-color);
 }
 
+.fa-brands {
+  transition: .5s;
+}
+.fa-brands:hover {
+  transition: .5s;
+  font-size: 4rem;
+}
+
 .navbar {
   font-size: 1.5rem;
   background-color: var(--navbar-bg);
@@ -223,52 +231,3 @@ main {
   color: var(--text-color);
 }
 
-
-/* 
-nav#navbar {
-  background-color: var(--navbar-bg);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  grid-area: nav;
-}
-
-nav>.nav-item {
-  display: block;
-  padding: 15px 5px;
-  font-size: 1.5rem;
-  margin-left: var(--margin-side);
-}
-
-nav>div:last-child {
-  margin-left: auto;
-  margin-right: 10px;
-  font-size: 2rem;
-}
- */
-
-
-/* Tablet Breakpoint */
-/* @media only screen and (min-width: 768px) {} */
-
-/* Desktop Breakpoint */
-/* @media only screen and (min-width: 1024px) {
-
-  nav#navbar {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  nav>.nav-item {
-    display: block;
-    padding: 15px 5px;
-  }
-
-  nav>button {
-    margin-left: auto;
-    padding: 1rem;
-  }
-} */
