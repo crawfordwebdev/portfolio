@@ -141,37 +141,39 @@ pages.work.content = projectMarkup
 function resumePageMarkup() {
   let professionalExperience, education, databases, programmingLanguages, frameworks, backend, otherTechnologies, operatingSystems= ""
 
+  const resumeSeperator = ` <span class="resume-seperator">|</span> `
+
   // ICE Map all of these to objects based on key?
 
   databases = resume.technicalExpertise.databases.map(item => 
     `${item}
     `
-  ).join(' <span class="resume-seperator">|</span> ')
+  ).join(resumeSeperator)
 
   programmingLanguages = resume.technicalExpertise.progLanguages.map(item => 
     `${item}
     `
-  ).join(' <span class="resume-seperator">|</span> ')
+  ).join(resumeSeperator)
 
   frameworks = resume.technicalExpertise.frameworks.map(item => 
     `${item}
     `
-  ).join(' <span class="resume-seperator">|</span> ')
+  ).join(resumeSeperator)
 
   backend = resume.technicalExpertise.backend.map(item => 
     `${item}
     `
-  ).join(' <span class="resume-seperator">|</span> ')
+  ).join(resumeSeperator)
 
   otherTechnologies = resume.technicalExpertise.otherTechnologies.map(item => 
     `${item}
     `
-  ).join(' <span class="resume-seperator">|</span> ')
+  ).join(resumeSeperator)
 
   operatingSystems = resume.technicalExpertise.operatingsystems.map(item => 
     `${item}
     `
-  ).join(' <span class="resume-seperator">|</span> ')
+  ).join(resumeSeperator)
 
   professionalExperience = resume.professionalExperience.map(item => 
     `<div class="resume-section">
@@ -227,8 +229,13 @@ function companyExists(value) {
   return html
 }
 
+
+let imageList = workPieces.map(project => project.image)
+
+console.log(imageList)
+
 export {
   workPieces,
   pages,
-  resume
+  resume,
 }
