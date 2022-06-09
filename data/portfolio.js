@@ -23,12 +23,15 @@ const socialMedia = {
 }
 
 const resume = {
-  databases: ["MySQL/MariaDB"],
-  progLanguages: ["HTML5", "CSS3", "JavaScript", "PHP", "Python", "C++", "C#"],
-  frameworks: ["Bootstrap", "Express.js"],
-  backend: ["Node.js", "nginx", "Apache"],
-  otherTechnologies: ["Docker", "Proxmox", "Raspberry Pi"],
-  operatingsystems: ["Linux (Debian, Ubuntu, CentOS/RedHat)", "Microsoft Windows 10"],
+  title: "Software Engineer",
+  technicalExpertise: {
+    databases: ["MySQL/MariaDB"],
+    progLanguages: ["HTML5", "CSS3", "JavaScript", "PHP", "Python", "C++", "C#"],
+    frameworks: ["Bootstrap", "Express.js"],
+    backend: ["Node.js", "nginx", "Apache"],
+    otherTechnologies: ["Docker", "Proxmox", "Raspberry Pi"],
+    operatingsystems: ["Linux (Debian, Ubuntu, CentOS/RedHat)", "Microsoft Windows 10"],
+  },
   professionalExperience: [
     {
       title: "IT Consulting",
@@ -139,14 +142,94 @@ let projectMarkup = workPieces.map(project =>
 pages.work.content = projectMarkup
 
 function resumePageMarkup() {
-  let html = ""
-  
+  let professionalExperience, education, databases, programmingLanguages, frameworks, backend, otherTechnologies, operatingSystems= ""
 
-  return html
+  // ICE Map all of these to objects based on key?
+
+  databases = resume.technicalExpertise.databases.map(item => 
+    `${item}
+    `
+  ).join(' <span class="resume-seperator">|</span> ')
+
+  programmingLanguages = resume.technicalExpertise.progLanguages.map(item => 
+    `${item}
+    `
+  ).join(' <span class="resume-seperator">|</span> ')
+
+  frameworks = resume.technicalExpertise.frameworks.map(item => 
+    `${item}
+    `
+  ).join(' <span class="resume-seperator">|</span> ')
+
+  backend = resume.technicalExpertise.backend.map(item => 
+    `${item}
+    `
+  ).join(' <span class="resume-seperator">|</span> ')
+
+  otherTechnologies = resume.technicalExpertise.otherTechnologies.map(item => 
+    `${item}
+    `
+  ).join(' <span class="resume-seperator">|</span> ')
+
+  operatingSystems = resume.technicalExpertise.operatingsystems.map(item => 
+    `${item}
+    `
+  ).join(' <span class="resume-seperator">|</span> ')
+
+  professionalExperience = resume.professionalExperience.map(item => 
+    `<div class="resume-section">
+      <span class="resume-subsection">${item.title}${companyExists(item.company)}</span>
+      <div class="resume-years">${item.years}</div>
+    </div>
+    `
+  ).join('')
+
+  education = resume.education.map(item => 
+    `<div class="resume-section">
+      <span class="resume-subsection">${item.school}${companyExists(item.degree)}</span>
+      <div class="resume-years">${item.years}</div>
+    </div>
+    `
+  ).join('')
+
+  return `
+  <h1>${resume.title}</h1>
+  <h2>Technical Expertise</h2>
+  <div>
+    <span class="resume-subsection">Databases: </span>${databases}
+  </div>
+  <div>
+    <span class="resume-subsection">Programming: </span>${programmingLanguages}
+  </div>
+  <div>
+    <span class="resume-subsection">Frameworks: </span>${frameworks}
+  </div>
+  <div>
+    <span class="resume-subsection">Backend: </span>${backend}
+  </div>
+  <div>
+    <span class="resume-subsection">Other Technologies: </span>${otherTechnologies}
+  </div>
+  <div>
+    <span class="resume-subsection">Operating Systems: </span>${operatingSystems}
+  </div>
+  <h2>Professional Experience</h2>
+  ${professionalExperience}
+  <h2>Education</h2>
+  ${education}
+  `
 
 }
 
-pages.resume.content = resumePageMarkup();
+pages.resume.content = resumePageMarkup()
+
+function companyExists(value) {
+  let html = ""
+  if (value !== "") {
+    html += `: ${value}`
+  }
+  return html
+}
 
 
 
