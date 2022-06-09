@@ -130,11 +130,12 @@ div > span {
 }
 
 .fa-brands {
-  transition: .5s;
+  transition: 0.5s;
 }
 .fa-brands:hover {
-  transition: .5s;
+  transition: 0.5s;
   font-size: 4rem;
+  opacity: 0.75;
 }
 
 .navbar {
