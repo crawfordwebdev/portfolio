@@ -6,6 +6,7 @@ const bgMusic = new Audio(`../assets/music/the-introvert-michael-kobrin-10959.mp
 
 /*---------------------------- Variables (state) ----------------------------*/
 let musicPlaying = false
+let lightMode = true;
 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -13,13 +14,16 @@ const navbarEl = document.querySelectorAll('.nav-item')
 const navbar = document.querySelector('.navbar-nav')
 const contentContainer = document.querySelector('#content')
 const bgMusicBtn = document.getElementById('bgMusic-btn')
-const lightDarkBtn = document.querySelector("#light-dark-button")
+const lightDarkBtn = document.querySelector("#light-dark-input")
+
+const root = document.documentElement;
 
 
 /*----------------------------- Event Listeners -----------------------------*/
 navbar.addEventListener('click', navigateContent)
 navbar.addEventListener('click', navbarClass)
 bgMusicBtn.addEventListener('click', musicHandler)
+lightDarkBtn.addEventListener('click', lightDarkMode)
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -67,4 +71,27 @@ function musicHandler(evt) {
     evt.target.textContent = "Resume Music"
     musicPlaying = false;
   }
+}
+
+function lightDarkMode(evt) {
+  console.log("test")
+  console.log(`Light Mode: ${lightMode}`)
+  let navbarBG, contentBG, textColorBG
+
+  if (lightMode) {
+    // make dark
+    navbarBG = '--dark-navbar-bg'
+    contentBG = '--dark-content-bg'
+    textColorBG = '--dark-text-color'
+    lightMode = false;
+  } else {
+    // make light
+    navbarBG = '--light-navbar-bg'
+    contentBG = '--light-content-bg'
+    textColorBG = '--light-text-color'
+    lightMode = true;
+  }
+  root.style.setProperty('--navbar-bg', `var(${navbarBG})`)
+  root.style.setProperty('--content-bg', `var(${contentBG})`)
+  root.style.setProperty('--text-color', `var(${textColorBG}`)
 }
