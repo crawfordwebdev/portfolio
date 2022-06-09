@@ -24,10 +24,52 @@ const socialMedia = {
 
 const resume = {
   databases: ["MySQL/MariaDB"],
-  progLanguages: ["HTML5", "CSS3", "JavaScript"],
-  operatingsystems: ["Linux (Debian, Ubuntu, CentOS/RedHat)", "Microsoft Windows 10"]
-
+  progLanguages: ["HTML5", "CSS3", "JavaScript", "PHP", "Python", "C++", "C#"],
+  frameworks: ["Bootstrap", "Express.js"],
+  backend: ["Node.js", "nginx", "Apache"],
+  otherTechnologies: ["Docker", "Proxmox", "Raspberry Pi"],
+  operatingsystems: ["Linux (Debian, Ubuntu, CentOS/RedHat)", "Microsoft Windows 10"],
+  professionalExperience: [
+    {
+      title: "IT Consulting",
+      company: "",
+      years: "2005 - current"
+    },
+    {
+      title: "Photographer",
+      company: "",
+      years: "2008 - current"
+    },
+    {
+      title: "IT Director",
+      company: "onesourcedocs",
+      years: "2018"
+    },
+    {
+      title: "Game Master (Community Manager)",
+      company: "NHN USA for ijji.com",
+      years: "2007"
+    },
+    {
+      title: "Game Master (Customer Service)",
+      company: "Blizzard Entertainment",
+      years: "2004"
+    }
+  ],
+  education: [
+    {
+      school: "Brigham Young University",
+      degree: "Studied Computer Science / IT",
+      years: "2018-2019"
+    },
+    {
+      school: "Brigham Young University Idaho",
+      degree: "Associates of Science",
+      years: "2012-2013"
+    },
+  ]
 }
+
 
 
 const pages = {
@@ -100,5 +142,6 @@ pages.work.content = projectMarkup
 
 export {
   workPieces,
-  pages
+  pages,
+  resume
 }
