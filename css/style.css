@@ -152,6 +152,7 @@ main {
 
 #content {
   max-width: var(--easy-read);
+  color: var(--text-color);
 }
 
 #content>h1 {
