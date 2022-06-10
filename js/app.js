@@ -16,6 +16,7 @@ const contentContainer = document.querySelector('#content')
 const bgMusicBtn = document.getElementById('bgMusic-btn')
 const lightDarkBtn = document.querySelector("#light-dark-input")
 const navToggleBtn = document.querySelector('.navbar-toggler')
+const favicon = document.querySelector("link[rel*='icon']")
 const root = document.documentElement;
 
 
@@ -74,7 +75,7 @@ function musicHandler(evt) {
 }
 
 function lightDarkMode(evt) {
-  let navbarBG, contentBG, textColorBG, lightDarkTextContent
+  let navbarBG, contentBG, textColorBG, lightDarkTextContent, faviconLink
 
   if (lightMode) {
     // make dark
@@ -83,6 +84,7 @@ function lightDarkMode(evt) {
     textColorBG = '--dark-text-color'
     lightDarkTextContent = ` Dark  <i class="fa-solid fa-lightbulb">`
     navToggleBtn.classList.add('navbar-toggler-dark')
+    faviconLink = "./assets/dark/favicon.ico"
     lightMode = false;
   } else {
     // make light
@@ -91,10 +93,12 @@ function lightDarkMode(evt) {
     textColorBG = '--light-text-color'
     lightDarkTextContent = `Light  <i class="fa-solid fa-lightbulb">`
     navToggleBtn.classList.remove('navbar-toggler-dark')
+    faviconLink = "./assets/light/favicon.ico"
     lightMode = true;
   }
   root.style.setProperty('--navbar-bg', `var(${navbarBG})`)
   root.style.setProperty('--content-bg', `var(${contentBG})`)
   root.style.setProperty('--text-color', `var(${textColorBG}`)
   lightDarkBtn.innerHTML = lightDarkTextContent
+  favicon.href = faviconLink
 }
