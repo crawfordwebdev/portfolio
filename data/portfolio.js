@@ -128,8 +128,8 @@ let projectMarkup = workPieces.map(project =>
         <h5 class="card-title">${project.title}</h5>
         <p class="card-text">${project.description}</p>
         <div>
-          <a href="${socialMedia.github.url}/${project.githubRepo}" class="btn btn-primary">GitHub</a>
-          <a href="${project.deployment}" class="btn btn-secondary">Deployment</a>
+          <a target="_blank" rel="noopener" href="${socialMedia.github.url}/${project.githubRepo}" class="btn btn-primary">GitHub</a>
+          <a target="_blank" rel="noopener" href="${project.deployment}" class="btn btn-secondary">Deployment</a>
         </div>
       </div>
     </div>
