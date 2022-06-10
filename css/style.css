@@ -132,6 +132,10 @@ div > span {
   bottom: 5px;
 }
 
+.navbar-toggler-dark {
+  background-color: var(--text-color);
+}
+
 #contact-points {
   display: flex;
   align-items: center;
