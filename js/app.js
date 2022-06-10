@@ -74,8 +74,6 @@ function musicHandler(evt) {
 }
 
 function lightDarkMode(evt) {
-  console.log("test")
-  console.log(`Light Mode: ${lightMode}`)
   let navbarBG, contentBG, textColorBG, lightDarkTextContent
 
   if (lightMode) {
@@ -95,7 +93,6 @@ function lightDarkMode(evt) {
     navToggleBtn.classList.remove('navbar-toggler-dark')
     lightMode = true;
   }
-  console.log(navToggleBtn.classList)
   root.style.setProperty('--navbar-bg', `var(${navbarBG})`)
   root.style.setProperty('--content-bg', `var(${contentBG})`)
   root.style.setProperty('--text-color', `var(${textColorBG}`)
