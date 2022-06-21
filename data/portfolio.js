@@ -47,16 +47,6 @@ const resume = {
       title: "IT Director",
       company: "onesourcedocs",
       years: "2018"
-    },
-    {
-      title: "Game Master (Community Manager)",
-      company: "NHN USA for ijji.com",
-      years: "2007"
-    },
-    {
-      title: "Game Master (Customer Service)",
-      company: "Blizzard Entertainment",
-      years: "2004"
     }
   ],
   education: [
