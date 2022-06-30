@@ -252,3 +252,9 @@ button#bgMusic-btn {
   color: var(--text-color);
 }
 
+#work-content {
+  display: flex;
+}
+#work-content .card {
+  margin: 0.5rem;
+}
