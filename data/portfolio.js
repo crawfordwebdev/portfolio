@@ -25,10 +25,10 @@ const socialMedia = {
 const resume = {
   title: "Software Engineer",
   technicalExpertise: {
-    databases: ["MySQL/MariaDB"],
+    databases: ["MySQL/MariaDB", "MongoDB"],
     progLanguages: ["HTML5", "CSS3", "JavaScript", "PHP", "Python", "C++", "C#"],
     frameworks: ["Bootstrap", "Express.js"],
-    backend: ["Node.js", "nginx", "Apache"],
+    backend: ["Node.js", "express.js", "mongoose", "nginx", "Apache"],
     otherTechnologies: ["Docker", "Proxmox", "Raspberry Pi"],
     operatingsystems: ["Linux (Debian, Ubuntu, CentOS/RedHat)", "Microsoft Windows 10"],
   },
@@ -92,12 +92,21 @@ const pages = {
 
 const workPieces = [
   {
+    title: "Dookie Data",
+    deployment: "https://dookie-data.herokuapp.com/",
+    githubRepo: "baby-tracker",
+    description: "",
+    technologies: ["html", "css", "node.js", "express.js", 
+      "mongoose", "mongodb", "dayjs", "heroku"],
+    image: "",
+  },
+  {
     title: "Tic Tac Toe",
     deployment: "https://ttt.crawfordwebdev.com/",
     githubRepo: "ttt-weekend",
     description: "",
     technologies: ["html", "css", "javascript"],
-    image: `../assets/images/ttt-weekend.png`,
+    image: "../assets/images/ttt-weekend.png",
   },
 ]
 
@@ -126,7 +135,7 @@ let projectMarkup = workPieces.map(project =>
   `
 ).join('')
 
-pages.work.content = projectMarkup
+pages.work.content = `<div id="work-content">${projectMarkup}</div>`
 
 function resumePageMarkup() {
   let professionalExperience, education, databases, programmingLanguages, frameworks, backend, otherTechnologies, operatingSystems= ""
