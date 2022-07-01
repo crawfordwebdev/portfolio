@@ -98,7 +98,7 @@ const workPieces = [
     description: "",
     technologies: ["html", "css", "node.js", "express.js", 
       "mongoose", "mongodb", "dayjs", "heroku"],
-    image: "",
+    image: "../assets/images/baby-tracker.png",
   },
   {
     title: "Tic Tac Toe",
