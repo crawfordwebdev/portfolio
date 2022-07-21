@@ -92,6 +92,15 @@ const pages = {
 
 const workPieces = [
   {
+  title: "Stranger Drinks",
+    deployment: "https://stranger-drinks.netlify.app/",
+    githubRepo: "stranger-drinks-front-end",
+    description: "",
+    technologies: ["html", "css", "node.js", "express.js", 
+      "mongoose", "mongodb", "heroku"],
+    image: "../assets/images/StrangerDrinks300.png",
+  },
+  {
     title: "Dookie Data",
     deployment: "https://dookie-data.herokuapp.com/",
     githubRepo: "baby-tracker",
