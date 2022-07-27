@@ -92,6 +92,15 @@ const pages = {
 
 const workPieces = [
   {
+  title: "Honeydews",
+    deployment: "https://honeydews.netlify.app/",
+    githubRepo: "honeydew-list-front-end",
+    description: "",
+    technologies: ["html", "css", "node.js", "express.js", 
+      "mongoose", "mongodb", "heroku", "netlify", "react", "mui"],
+    image: "../assets/images/honeydews300.png",
+  },
+  {
   title: "Stranger Drinks",
     deployment: "https://stranger-drinks.netlify.app/",
     githubRepo: "stranger-drinks-front-end",
