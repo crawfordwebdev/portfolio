@@ -258,3 +258,7 @@ button#bgMusic-btn {
 #work-content .card {
   margin: 0.5rem;
 }
+
+div > a.btn.btn-primary {
+  margin-bottom: 3px;
+}
