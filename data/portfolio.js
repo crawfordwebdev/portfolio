@@ -92,6 +92,14 @@ const pages = {
 
 const workPieces = [
   {
+    title: "Where's My Dinner?",
+      deployment: "https://wheresmydinner.herokuapp.com/",
+      githubRepo: "wheres_my_dinner",
+      description: "",
+      technologies: ["html", "css", "javascript", "django", "heroku", "aws"],
+      image: "../assets/images/wheresmydinner-300.webp",
+    },
+  {
   title: "Honeydews",
     deployment: "https://honeydews.netlify.app/",
     githubRepo: "honeydew-list-front-end",
