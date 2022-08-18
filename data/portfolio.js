@@ -25,10 +25,10 @@ const socialMedia = {
 const resume = {
   title: "Software Engineer",
   technicalExpertise: {
-    databases: ["MySQL/MariaDB", "MongoDB"],
+    databases: ["MySQL/MariaDB", "MongoDB", "PostgreSQL"],
     progLanguages: ["HTML5", "CSS3", "JavaScript", "PHP", "Python", "C++", "C#"],
-    frameworks: ["Bootstrap", "Express.js"],
-    backend: ["Node.js", "express.js", "mongoose", "nginx", "Apache"],
+    frontend: ["React", "Bootstrap", "MUI", "JWT"],
+    backend: ["Node.js", "Express.js", "Django", "JWT", "mongoose", "nginx", "Apache"],
     otherTechnologies: ["Docker", "Proxmox", "Raspberry Pi"],
     operatingsystems: ["Linux (Debian, Ubuntu, CentOS/RedHat)", "Microsoft Windows 10"],
   },
@@ -229,10 +229,10 @@ function resumePageMarkup() {
     <span class="${resumeSubSectionClass}">Programming: </span>${programmingLanguages}
   </div>
   <div>
-    <span class="${resumeSubSectionClass}">Frameworks: </span>${frameworks}
+    <span class="${resumeSubSectionClass}">Front-end: </span>${frontend}
   </div>
   <div>
-    <span class="${resumeSubSectionClass}">Backend: </span>${backend}
+    <span class="${resumeSubSectionClass}">Back-end: </span>${backend}
   </div>
   <div>
     <span class="${resumeSubSectionClass}">Other Technologies: </span>${otherTechnologies}
