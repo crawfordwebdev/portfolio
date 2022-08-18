@@ -53,7 +53,6 @@ function renderContent(pageObj) {
 function navbarClass(evt) {
   let classToModify = "nav-item-highlight"
   for (let item of navbarEl) {
-    console.log(`Current Item: ${item}`)
     if (item.classList.contains(classToModify)) {
       item.classList.remove(classToModify)
     }
