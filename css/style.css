@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:wght@300&family=Source+Code+Pro&display=swap');
+
 :root {
   /* https://coolors.co/palette/03045e-0077b6-00b4d8-90e0ef-caf0f8 */
   --midnight-blue: hsla(239, 94%, 19%, 1);
@@ -26,6 +28,9 @@
 
   --easy-read: 900px;
 
+  --nav-font: 'Bungee';
+  --header-font: 'Source Code Pro', monospace;
+  --text-font: 'Roboto', Roboto, sans-serif;
 }
 
 .btn-primary {
@@ -86,11 +91,18 @@ body {
   "nav nav nav"
   "main main main"; */
   transition: 0.25s;
+  font-family: var(--text-font);
 }
 
-h1,
-p,
-#light-dark-input {
+a.nav-link {
+  font-family: var(--nav-font);
+}
+
+h1, h2 {
+  font-family: var(--header-font);
+}
+
+h1, p, #light-dark-input {
   color: var(--text-color);
 }
 
@@ -123,6 +135,7 @@ div > span {
 .card img:hover {
   filter: grayscale(100%);
 }
+
 .card {
   bottom: 0;
   transition: all linear 0.1s;
