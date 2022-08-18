@@ -164,7 +164,7 @@ let projectMarkup = workPieces.map(project =>
 pages.work.content = `<div id="work-content">${projectMarkup}</div>`
 
 function resumePageMarkup() {
-  let professionalExperience, education, databases, programmingLanguages, frameworks, backend, otherTechnologies, operatingSystems= ""
+  let professionalExperience, education, databases, programmingLanguages, frontend, backend, otherTechnologies, operatingSystems= ""
 
   const resumeSeperator = ` <span class="resume-seperator">|</span> `
   const resumeSubSectionClass = `resume-subsection`
@@ -183,7 +183,7 @@ function resumePageMarkup() {
     `
   ).join(resumeSeperator)
 
-  frameworks = resume.technicalExpertise.frameworks.map(item => 
+  frontend = resume.technicalExpertise.frontend.map(item => 
     `${item}
     `
   ).join(resumeSeperator)
